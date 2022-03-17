@@ -327,7 +327,11 @@ public class AppGame {
                     sum += v.get(i);
                 }
           
-                output.setText("Your number is: " + sum);     
+                output.setText("Your number is: " + sum);
+                Frame outputFrame = new Frame("Output"); 
+                outputFrame.setVisible(true);
+                outputFrame.setSize(400, 800);
+                outputFrame.add(output);    
             }  
          });  
 
@@ -341,11 +345,15 @@ public class AppGame {
                 }
           
                 output.setText("Your number is: " + sum);
+                Frame outputFrame = new Frame("Output"); 
+                outputFrame.setVisible(true);
+                outputFrame.setSize(400, 800);
+                outputFrame.add(output); 
             }  
          });  
       
 
-        f.add(output);
+        // f.add(output);
         f.addWindowListener(new WindowAdapter(){
             public void windowClosing(WindowEvent we)
             {
